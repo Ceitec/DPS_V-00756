@@ -1983,7 +1983,7 @@ Source: MBRS340T3-D.pdf</description>
 <part name="C5" library="#PaJa_31" deviceset="C-KER" device="_1206" value="10uF"/>
 <part name="C6" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
 <part name="U$1" library="#PaJa_konektory" deviceset="AVR_PROG_SPI" device=""/>
-<part name="K1" library="#PaJa_konektory" deviceset="PSH02-04" device="W"/>
+<part name="K1" library="#PaJa_konektory" deviceset="PSH02-04" device="P"/>
 <part name="IC1" library="atmel" deviceset="MEGA8" device="-AI"/>
 <part name="K2" library="#PaJa_konektory" deviceset="PSH02-02" device="W"/>
 <part name="K3" library="#PaJa_konektory" deviceset="PSH02-02" device="W"/>

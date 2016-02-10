@@ -1979,13 +1979,14 @@ Source: MBRS340T3-D.pdf</description>
 <part name="C3" library="#PaJa_31" deviceset="C-KER" device="_0805" value="27nF"/>
 <part name="C4" library="#PaJa_31" deviceset="C-KER" device="_0805" value="27nF"/>
 <part name="D1" library="diode" deviceset="MBRS3*0T3" device="" technology="4"/>
-<part name="IO2" library="#PaJa_31" deviceset="LF_C" device="DT" value="LF50CDT"/>
+<part name="IO2" library="#PaJa_31" deviceset="LF_C" device="DT" value="78M05"/>
 <part name="C5" library="#PaJa_31" deviceset="C-KER" device="_1206" value="10uF"/>
 <part name="C6" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
 <part name="U$1" library="#PaJa_konektory" deviceset="AVR_PROG_SPI" device=""/>
-<part name="K1" library="#PaJa_konektory" deviceset="PSH02-04" device="P"/>
-<part name="K2" library="#PaJa_konektory" deviceset="PSH02-02" device="P"/>
+<part name="K1" library="#PaJa_konektory" deviceset="PSH02-04" device="W"/>
 <part name="IC1" library="atmel" deviceset="MEGA8" device="-AI"/>
+<part name="K2" library="#PaJa_konektory" deviceset="PSH02-02" device="W"/>
+<part name="K3" library="#PaJa_konektory" deviceset="PSH02-02" device="W"/>
 </parts>
 <sheets>
 <sheet>
@@ -2019,8 +2020,9 @@ RS485 -&gt; 5TTL</text>
 <instance part="C6" gate="C" x="165.1" y="162.56" rot="R90"/>
 <instance part="U$1" gate="G$1" x="231.14" y="162.56" rot="R270"/>
 <instance part="K1" gate="KON" x="226.06" y="134.62" rot="R270"/>
-<instance part="K2" gate="KON" x="226.06" y="116.84" rot="R270"/>
 <instance part="IC1" gate="G$1" x="109.22" y="124.46"/>
+<instance part="K2" gate="KON" x="187.96" y="139.7" rot="R270"/>
+<instance part="K3" gate="KON" x="187.96" y="127" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -2187,11 +2189,6 @@ RS485 -&gt; 5TTL</text>
 <label x="218.44" y="129.54" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="K2" gate="KON" pin="2"/>
-<wire x1="223.52" y1="114.3" x2="218.44" y2="114.3" width="0.1524" layer="91"/>
-<label x="218.44" y="114.3" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="GND@1"/>
 <wire x1="86.36" y1="119.38" x2="81.28" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="GND@2"/>
@@ -2205,6 +2202,16 @@ RS485 -&gt; 5TTL</text>
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="86.36" y1="144.78" x2="81.28" y2="144.78" width="0.1524" layer="91"/>
 <label x="81.28" y="144.78" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="K2" gate="KON" pin="2"/>
+<wire x1="185.42" y1="137.16" x2="180.34" y2="137.16" width="0.1524" layer="91"/>
+<label x="180.34" y="137.16" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="K3" gate="KON" pin="2"/>
+<wire x1="185.42" y1="124.46" x2="180.34" y2="124.46" width="0.1524" layer="91"/>
+<label x="180.34" y="124.46" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="AREF" class="0">
@@ -2301,9 +2308,9 @@ RS485 -&gt; 5TTL</text>
 <label x="142.24" y="167.64" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="K2" gate="KON" pin="1"/>
-<wire x1="223.52" y1="116.84" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
-<label x="218.44" y="116.84" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<pinref part="K1" gate="KON" pin="1"/>
+<wire x1="223.52" y1="137.16" x2="218.44" y2="137.16" width="0.1524" layer="91"/>
+<label x="218.44" y="137.16" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="+24V" class="0">
@@ -2315,11 +2322,6 @@ RS485 -&gt; 5TTL</text>
 <wire x1="165.1" y1="167.64" x2="167.64" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="167.64" x2="165.1" y2="165.1" width="0.1524" layer="91"/>
 <junction x="165.1" y="167.64"/>
-</segment>
-<segment>
-<pinref part="K1" gate="KON" pin="1"/>
-<wire x1="223.52" y1="137.16" x2="218.44" y2="137.16" width="0.1524" layer="91"/>
-<label x="218.44" y="137.16" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="P_MISO" class="0">
@@ -2356,6 +2358,30 @@ RS485 -&gt; 5TTL</text>
 <wire x1="134.62" y1="96.52" x2="147.32" y2="96.52" width="0.1524" layer="91"/>
 <label x="147.32" y="96.52" size="1.016" layer="95" font="vector" ratio="10" xref="yes"/>
 <pinref part="IC1" gate="G$1" pin="PB3(MOSI/OC2)"/>
+</segment>
+</net>
+<net name="INT_LOCK_0" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PC0(ADC0)"/>
+<wire x1="134.62" y1="149.86" x2="144.78" y2="149.86" width="0.1524" layer="91"/>
+<label x="144.78" y="149.86" size="1.016" layer="95" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<pinref part="K2" gate="KON" pin="1"/>
+<wire x1="185.42" y1="139.7" x2="180.34" y2="139.7" width="0.1524" layer="91"/>
+<label x="180.34" y="139.7" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="INT_LOCK_1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PC1(ADC1)"/>
+<wire x1="134.62" y1="147.32" x2="144.78" y2="147.32" width="0.1524" layer="91"/>
+<label x="144.78" y="147.32" size="1.016" layer="95" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<pinref part="K3" gate="KON" pin="1"/>
+<wire x1="185.42" y1="127" x2="180.34" y2="127" width="0.1524" layer="91"/>
+<label x="180.34" y="127" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

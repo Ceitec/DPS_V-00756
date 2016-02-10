@@ -1810,12 +1810,12 @@ paja@paja-trb.cz
 <devices>
 <device name="" package="PSH02-06P">
 <connects>
-<connect gate="G$1" pin="!RST" pad="5"/>
+<connect gate="G$1" pin="!RST" pad="3"/>
 <connect gate="G$1" pin="GND" pad="1"/>
-<connect gate="G$1" pin="MISO" pad="3"/>
+<connect gate="G$1" pin="MISO" pad="5"/>
 <connect gate="G$1" pin="MOSI" pad="6"/>
-<connect gate="G$1" pin="SCK" pad="2"/>
-<connect gate="G$1" pin="VCC" pad="4"/>
+<connect gate="G$1" pin="SCK" pad="4"/>
+<connect gate="G$1" pin="VCC" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1969,7 +1969,7 @@ Source: MBRS340T3-D.pdf</description>
 <parts>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="IC2" library="maxim" deviceset="MAX481CSA" device=""/>
-<part name="IO1" library="references" deviceset="TL431" device="SOT23"/>
+<part name="IO1" library="references" deviceset="TL431" device="SOT23" value="TL431"/>
 <part name="C1" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
 <part name="R1" library="#PaJa_31" deviceset="R" device="_1206" value="1k"/>
 <part name="R2" library="#PaJa_31" deviceset="R" device="_1206" value="10R"/>
@@ -1979,20 +1979,22 @@ Source: MBRS340T3-D.pdf</description>
 <part name="C3" library="#PaJa_31" deviceset="C-KER" device="_0805" value="27nF"/>
 <part name="C4" library="#PaJa_31" deviceset="C-KER" device="_0805" value="27nF"/>
 <part name="D1" library="diode" deviceset="MBRS3*0T3" device="" technology="4"/>
-<part name="IO2" library="#PaJa_31" deviceset="LF_C" device="DT" value="LF50CDT"/>
+<part name="IO2" library="#PaJa_31" deviceset="LF_C" device="DT" value="78M05"/>
 <part name="C5" library="#PaJa_31" deviceset="C-KER" device="_1206" value="10uF"/>
 <part name="C6" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
 <part name="U$1" library="#PaJa_konektory" deviceset="AVR_PROG_SPI" device=""/>
-<part name="K1" library="#PaJa_konektory" deviceset="PSH02-04" device="P"/>
+<part name="K1" library="#PaJa_konektory" deviceset="PSH02-04" device="W"/>
 <part name="IC1" library="atmel" deviceset="MEGA8" device="-AI"/>
 <part name="K2" library="#PaJa_konektory" deviceset="PSH02-02" device="W"/>
 <part name="K3" library="#PaJa_konektory" deviceset="PSH02-02" device="W"/>
+<part name="C7" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
+<part name="C8" library="#PaJa_31" deviceset="C-KER" device="_1206" value="100n"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="127" y="12.7" size="2.54" layer="94">Ovládání ofuku pres
-RS485 -&gt; 5TTL</text>
+<text x="127" y="12.7" size="2.54" layer="94">Smerovac, s dvema interlocky
+RS485 -&gt; TTL</text>
 <text x="246.38" y="5.08" size="2.54" layer="94">00</text>
 </plain>
 <instances>
@@ -2023,6 +2025,8 @@ RS485 -&gt; 5TTL</text>
 <instance part="IC1" gate="G$1" x="109.22" y="124.46"/>
 <instance part="K2" gate="KON" x="187.96" y="139.7" rot="R270"/>
 <instance part="K3" gate="KON" x="187.96" y="127" rot="R270"/>
+<instance part="C7" gate="C" x="60.96" y="30.48" rot="R90"/>
+<instance part="C8" gate="C" x="73.66" y="30.48" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2133,6 +2137,16 @@ RS485 -&gt; 5TTL</text>
 <label x="78.74" y="111.76" size="1.016" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 <junction x="81.28" y="111.76"/>
 </segment>
+<segment>
+<pinref part="C7" gate="C" pin="2"/>
+<wire x1="60.96" y1="33.02" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
+<label x="60.96" y="35.56" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C8" gate="C" pin="2"/>
+<wire x1="73.66" y1="33.02" x2="73.66" y2="35.56" width="0.1524" layer="91"/>
+<label x="73.66" y="35.56" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -2212,6 +2226,16 @@ RS485 -&gt; 5TTL</text>
 <pinref part="K3" gate="KON" pin="2"/>
 <wire x1="185.42" y1="124.46" x2="180.34" y2="124.46" width="0.1524" layer="91"/>
 <label x="180.34" y="124.46" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C7" gate="C" pin="1"/>
+<wire x1="60.96" y1="25.4" x2="60.96" y2="22.86" width="0.1524" layer="91"/>
+<label x="60.96" y="22.86" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C8" gate="C" pin="1"/>
+<wire x1="73.66" y1="25.4" x2="73.66" y2="22.86" width="0.1524" layer="91"/>
+<label x="73.66" y="22.86" size="1.016" layer="95" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="AREF" class="0">

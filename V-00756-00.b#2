@@ -28,14 +28,14 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -145,6 +145,12 @@
 <circle x="34" y="35" radius="3.5" width="0" layer="41"/>
 <dimension x1="35" y1="0" x2="35" y2="67" x3="42.1" y3="33.5" textsize="1.778" layer="47"/>
 <dimension x1="35" y1="67" x2="0" y2="67" x3="17.5" y3="72.5" textsize="1.778" layer="47"/>
+<text x="143.7" y="-55.4" size="2.54" layer="48">00</text>
+<text x="23.5" y="-42.3" size="2.54" layer="48" align="top-left">DPS pro smerovac
+se dvema interlocky</text>
+<text x="73.8" y="-52.3" size="2.54" layer="48" align="top-left">Top</text>
+<dimension x1="43" y1="0" x2="43" y2="70" x3="54.6" y3="35" textsize="2.54" layer="47"/>
+<dimension x1="43" y1="70" x2="0" y2="70" x3="21.5" y3="76.1" textsize="2.54" layer="47"/>
 </plain>
 <libraries>
 <library name="atmel">
@@ -565,6 +571,37 @@ Based on the following sources:
 </package>
 </packages>
 </library>
+<library name="frames">
+<description>&lt;b&gt;Frames for Sheet and Layout&lt;/b&gt;</description>
+<packages>
+<package name="A4L-LOC">
+<description>&lt;b&gt;FRAME&lt;/b&gt; DIN A4 landscape with doc field</description>
+<wire x1="256.54" y1="3.81" x2="256.54" y2="8.89" width="0.1016" layer="48"/>
+<wire x1="256.54" y1="8.89" x2="256.54" y2="13.97" width="0.1016" layer="48"/>
+<wire x1="256.54" y1="13.97" x2="256.54" y2="19.05" width="0.1016" layer="48"/>
+<wire x1="256.54" y1="19.05" x2="256.54" y2="24.13" width="0.1016" layer="48"/>
+<wire x1="127" y1="3.81" x2="127" y2="24.13" width="0.1016" layer="48"/>
+<wire x1="127" y1="24.13" x2="193.04" y2="24.13" width="0.1016" layer="48"/>
+<wire x1="193.04" y1="24.13" x2="256.54" y2="24.13" width="0.1016" layer="48"/>
+<wire x1="227.33" y1="3.81" x2="227.33" y2="8.89" width="0.1016" layer="48"/>
+<wire x1="227.33" y1="8.89" x2="256.54" y2="8.89" width="0.1016" layer="48"/>
+<wire x1="227.33" y1="8.89" x2="193.04" y2="8.89" width="0.1016" layer="48"/>
+<wire x1="193.04" y1="8.89" x2="193.04" y2="3.81" width="0.1016" layer="48"/>
+<wire x1="193.04" y1="8.89" x2="193.04" y2="13.97" width="0.1016" layer="48"/>
+<wire x1="193.04" y1="13.97" x2="256.54" y2="13.97" width="0.1016" layer="48"/>
+<wire x1="193.04" y1="13.97" x2="193.04" y2="19.05" width="0.1016" layer="48"/>
+<wire x1="193.04" y1="19.05" x2="256.54" y2="19.05" width="0.1016" layer="48"/>
+<wire x1="193.04" y1="19.05" x2="193.04" y2="24.13" width="0.1016" layer="48"/>
+<text x="194.31" y="15.24" size="2.54" layer="48" font="vector">&gt;DRAWING_NAME</text>
+<text x="194.31" y="10.16" size="2.286" layer="48" font="vector">&gt;LAST_DATE_TIME</text>
+<frame x1="0" y1="0" x2="260.35" y2="179.07" columns="6" rows="4" layer="48"/>
+<text x="128.27" y="20.32" size="2.54" layer="48">Description:</text>
+<text x="194.31" y="20.32" size="2.54" layer="48">Author: Lukas Novak</text>
+<text x="194.31" y="5.08" size="2.54" layer="48">Sheet: 1/1</text>
+<text x="228.6" y="5.08" size="2.54" layer="48">Version:</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -770,16 +807,16 @@ Určeno pro kreslení a export výrobních dat</description>
 <element name="C1" library="#PaJa_31" package="1206" value="100n" x="27.2" y="39.2" rot="R90"/>
 <element name="R1" library="#PaJa_31" package="1206" value="1k" x="27.2" y="45.5" rot="R90"/>
 <element name="R2" library="#PaJa_31" package="1206" value="10R" x="24.2" y="49.7" rot="R90"/>
-<element name="R3" library="#PaJa_31" package="1206" value="10k" x="35.2" y="52.5" rot="MR270"/>
+<element name="R3" library="#PaJa_31" package="1206" value="10k" x="35.2" y="47.5" rot="MR270"/>
 <element name="C2" library="#PaJa_31" package="1206" value="10uF" x="27.2" y="51.3" rot="R270"/>
-<element name="Q1" library="#PaJa_31" package="HC-49U" value="14.7456MHz" x="15.1" y="44.3" rot="MR270"/>
-<element name="C3" library="#PaJa_31" package="0805" value="27nF" x="11.5" y="41.8"/>
-<element name="C4" library="#PaJa_31" package="0805" value="27nF" x="11.5" y="46.8"/>
+<element name="Q1" library="#PaJa_31" package="HC-49U" value="14.7456MHz" x="12.7" y="44.3" rot="MR270"/>
+<element name="C3" library="#PaJa_31" package="0805" value="27nF" x="9.1" y="41.8"/>
+<element name="C4" library="#PaJa_31" package="0805" value="27nF" x="9.1" y="46.8"/>
 <element name="D1" library="diode" package="SMC" value="MBRS340T3" x="12.6" y="25.6" rot="MR270"/>
-<element name="IO2" library="#PaJa_31" package="DPAK" value="LF50CDT" x="15.1" y="25" rot="R180"/>
+<element name="IO2" library="#PaJa_31" package="DPAK" value="78M05" x="15.1" y="25" rot="R180"/>
 <element name="C5" library="#PaJa_31" package="1206" value="10uF" x="8.9" y="26" rot="R90"/>
 <element name="C6" library="#PaJa_31" package="1206" value="100n" x="20" y="26" rot="R90"/>
-<element name="U$1" library="#PaJa_konektory" package="PSH02-06P" value="AVR_PROG_SPI" x="38.9" y="50" rot="R90"/>
+<element name="U$1" library="#PaJa_konektory" package="PSH02-06P" value="AVR_PROG_SPI" x="39" y="50" rot="R90"/>
 <element name="K1" library="#PaJa_konektory" package="PSH02-04W" value="" x="21" y="17" rot="MR180"/>
 <element name="IC1" library="atmel" package="TQFP32-08" value="MEGA8-AI" x="22.9" y="41.9" rot="MR180">
 <attribute name="OC_NEWARK" value="73M8863" x="22.9" y="41.9" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -787,8 +824,11 @@ Určeno pro kreslení a export výrobních dat</description>
 <attribute name="MF" value="" x="22.9" y="41.9" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="OC_FARNELL" value="9171371" x="22.9" y="41.9" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="K2" library="#PaJa_konektory" package="PSH02-02W" value="" x="25" y="60" rot="MR270"/>
+<element name="K2" library="#PaJa_konektory" package="PSH02-02W" value="" x="32" y="61" rot="MR270"/>
 <element name="K3" library="#PaJa_konektory" package="PSH02-02W" value="" x="40" y="30" rot="MR180"/>
+<element name="U$2" library="frames" package="A4L-LOC" value="" x="-104.9" y="-60.5"/>
+<element name="C7" library="#PaJa_31" package="1206" value="100n" x="18" y="43.1"/>
+<element name="C8" library="#PaJa_31" package="1206" value="100n" x="18" y="40.5"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -820,11 +860,15 @@ Určeno pro kreslení a export výrobních dat</description>
 <vertex x="43" y="70"/>
 <vertex x="0" y="70"/>
 </polygon>
-<wire x1="18.6074" y1="42.3" x2="17.3" y2="42.3" width="0.4064" layer="16"/>
-<wire x1="18.6074" y1="40.7" x2="17.3" y2="40.7" width="0.4064" layer="16"/>
+<wire x1="18.6074" y1="42.3" x2="14.9" y2="42.3" width="0.4064" layer="16"/>
+<wire x1="18.6074" y1="40.7" x2="14.9" y2="40.7" width="0.4064" layer="16"/>
 <wire x1="27.1926" y1="41.5" x2="29.1" y2="41.5" width="0.4064" layer="16"/>
 <wire x1="29.1" y1="41.5" x2="29.5" y2="41.1" width="0.4064" layer="16"/>
 <via x="29.5" y="41.1" extent="1-16" drill="0.6"/>
+<contactref element="C7" pad="1"/>
+<contactref element="C8" pad="1"/>
+<via x="31.1" y="48.2" extent="1-16" drill="0.6"/>
+<via x="31.2" y="51.9" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="RS485_EN">
 <contactref element="IC2" pad="2"/>
@@ -881,7 +925,7 @@ Určeno pro kreslení a export výrobních dat</description>
 <contactref element="R2" pad="2"/>
 <contactref element="IO2" pad="3"/>
 <contactref element="C5" pad="2"/>
-<contactref element="U$1" pad="4"/>
+<contactref element="U$1" pad="2"/>
 <polygon width="0.4064" layer="16" rank="5">
 <vertex x="25.9" y="38.9"/>
 <vertex x="19.9" y="38.9"/>
@@ -900,20 +944,31 @@ Určeno pro kreslení a export výrobních dat</description>
 <wire x1="19" y1="32.4" x2="20.4" y2="31" width="0.4064" layer="1"/>
 <wire x1="18.6074" y1="43.1" x2="20.2" y2="43.1" width="0.4064" layer="16"/>
 <wire x1="18.6074" y1="41.5" x2="20.2" y2="41.5" width="0.4064" layer="16"/>
-<wire x1="35.684290625" y1="51.27" x2="35.5575" y2="51.27" width="0.4064" layer="16"/>
-<wire x1="38.9" y1="51.27" x2="24.2175" y2="51.27" width="0.4064" layer="1"/>
-<wire x1="21.2" y1="48.2875" x2="21.2" y2="43.4" width="0.4064" layer="1"/>
-<wire x1="21.2" y1="43.4" x2="22.3" y2="42.3" width="0.4064" layer="1"/>
 <via x="22.3" y="42.3" extent="1-16" drill="0.6"/>
 <via x="20.4" y="31" extent="1-16" drill="0.6"/>
 <wire x1="20.4" y1="31" x2="23.295" y2="28.105" width="0.4064" layer="16"/>
 <wire x1="23.295" y1="28.105" x2="23.295" y2="27.1266" width="0.4064" layer="16"/>
-<wire x1="22.3" y1="42.3" x2="17.2" y2="37.2" width="0.4064" layer="1"/>
-<wire x1="17.2" y1="37.2" x2="17.2" y2="32.4" width="0.4064" layer="1"/>
+<wire x1="17.2" y1="37" x2="17.2" y2="32.4" width="0.4064" layer="1"/>
 <wire x1="24.2175" y1="51.27" x2="24.2" y2="51.2875" width="0.4064" layer="1"/>
 <wire x1="24.2" y1="51.2875" x2="21.2" y2="48.2875" width="0.4064" layer="1"/>
-<wire x1="38.9" y1="51.27" x2="35.684290625" y2="51.27" width="0.4064" layer="16"/>
-<wire x1="35.5575" y1="51.27" x2="35.2" y2="50.9125" width="0.4064" layer="16"/>
+<wire x1="39" y1="46.19" x2="35.4775" y2="46.19" width="0.4064" layer="16"/>
+<wire x1="35.4775" y1="46.19" x2="35.2" y2="45.9125" width="0.4064" layer="16"/>
+<contactref element="C7" pad="2"/>
+<contactref element="C8" pad="2"/>
+<wire x1="19.5875" y1="40.5" x2="20.5" y2="40.5" width="0.4064" layer="1"/>
+<wire x1="20.5" y1="40.5" x2="22.3" y2="42.3" width="0.4064" layer="1"/>
+<wire x1="22.3" y1="42.3" x2="22.2" y2="42.3" width="0.4064" layer="1"/>
+<wire x1="19.5875" y1="40.5" x2="19.5875" y2="39.3875" width="0.4064" layer="1"/>
+<wire x1="19.5875" y1="39.3875" x2="17.2" y2="37" width="0.4064" layer="1"/>
+<wire x1="19.5875" y1="43.1" x2="21.2" y2="43.1" width="0.4064" layer="1"/>
+<wire x1="21.2" y1="43.1" x2="21.5" y2="43.1" width="0.4064" layer="1"/>
+<wire x1="21.5" y1="43.1" x2="22.3" y2="42.3" width="0.4064" layer="1"/>
+<wire x1="21.2" y1="48.2875" x2="21.2" y2="43.1" width="0.4064" layer="1"/>
+<wire x1="36.9" y1="46.19" x2="39" y2="46.19" width="0.4064" layer="1"/>
+<wire x1="24.2175" y1="51.27" x2="28.53" y2="51.27" width="0.4064" layer="1"/>
+<wire x1="28.53" y1="51.27" x2="29.9" y2="49.9" width="0.4064" layer="1"/>
+<wire x1="29.9" y1="49.9" x2="33.19" y2="49.9" width="0.4064" layer="1"/>
+<wire x1="33.19" y1="49.9" x2="36.9" y2="46.19" width="0.4064" layer="1"/>
 </signal>
 <signal name="AREF">
 <contactref element="IO1" pad="2"/>
@@ -935,7 +990,7 @@ Určeno pro kreslení a export výrobních dat</description>
 </signal>
 <signal name="RESET">
 <contactref element="R3" pad="1"/>
-<contactref element="U$1" pad="5"/>
+<contactref element="U$1" pad="3"/>
 <contactref element="IC1" pad="29"/>
 <wire x1="22.5" y1="37.6074" x2="22.5" y2="36.3" width="0.4064" layer="16"/>
 <wire x1="22.5" y1="36.3" x2="23" y2="35.8" width="0.4064" layer="16"/>
@@ -943,29 +998,29 @@ Určeno pro kreslení a export výrobních dat</description>
 <wire x1="28.9" y1="35.8" x2="35" y2="41.9" width="0.4064" layer="16"/>
 <wire x1="35" y1="41.9" x2="40.6" y2="41.9" width="0.4064" layer="16"/>
 <wire x1="40.6" y1="41.9" x2="41.6" y2="42.9" width="0.4064" layer="16"/>
-<wire x1="41.6" y1="42.9" x2="41.6" y2="53.2" width="0.4064" layer="16"/>
-<wire x1="41.6" y1="53.2" x2="40.99" y2="53.81" width="0.4064" layer="16"/>
-<wire x1="38.9" y1="53.81" x2="40.99" y2="53.81" width="0.4064" layer="16"/>
-<wire x1="38.9" y1="53.81" x2="35.4775" y2="53.81" width="0.4064" layer="16"/>
-<wire x1="35.4775" y1="53.81" x2="35.2" y2="54.0875" width="0.4064" layer="16"/>
+<wire x1="39" y1="48.73" x2="35.5575" y2="48.73" width="0.4064" layer="16"/>
+<wire x1="35.5575" y1="48.73" x2="35.2" y2="49.0875" width="0.4064" layer="16"/>
+<wire x1="41.6" y1="42.9" x2="41.6" y2="47.8" width="0.4064" layer="16"/>
+<wire x1="41.6" y1="47.8" x2="40.67" y2="48.73" width="0.4064" layer="16"/>
+<wire x1="39" y1="48.73" x2="40.67" y2="48.73" width="0.4064" layer="16"/>
 </signal>
 <signal name="XTAL1">
 <contactref element="C3" pad="2"/>
 <contactref element="Q1" pad="2"/>
 <contactref element="IC1" pad="7"/>
-<wire x1="18.6074" y1="43.9" x2="17.24" y2="43.9" width="0.4064" layer="16"/>
-<wire x1="17.24" y1="43.9" x2="15.1" y2="41.76" width="0.4064" layer="16"/>
-<wire x1="15.1" y1="41.76" x2="12.4925" y2="41.76" width="0.4064" layer="1"/>
-<wire x1="12.4925" y1="41.76" x2="12.4525" y2="41.8" width="0.4064" layer="1"/>
+<wire x1="18.6074" y1="43.9" x2="14.84" y2="43.9" width="0.4064" layer="16"/>
+<wire x1="14.84" y1="43.9" x2="12.7" y2="41.76" width="0.4064" layer="16"/>
+<wire x1="12.7" y1="41.76" x2="10.0925" y2="41.76" width="0.4064" layer="1"/>
+<wire x1="10.0925" y1="41.76" x2="10.0525" y2="41.8" width="0.4064" layer="1"/>
 </signal>
 <signal name="XTAL2">
 <contactref element="Q1" pad="1"/>
 <contactref element="C4" pad="2"/>
 <contactref element="IC1" pad="8"/>
-<wire x1="18.6074" y1="44.7" x2="17.24" y2="44.7" width="0.4064" layer="16"/>
-<wire x1="17.24" y1="44.7" x2="15.1" y2="46.84" width="0.4064" layer="16"/>
-<wire x1="15.1" y1="46.84" x2="12.4925" y2="46.84" width="0.4064" layer="1"/>
-<wire x1="12.4925" y1="46.84" x2="12.4525" y2="46.8" width="0.4064" layer="1"/>
+<wire x1="18.6074" y1="44.7" x2="14.84" y2="44.7" width="0.4064" layer="16"/>
+<wire x1="14.84" y1="44.7" x2="12.7" y2="46.84" width="0.4064" layer="16"/>
+<wire x1="12.7" y1="46.84" x2="10.0925" y2="46.84" width="0.4064" layer="1"/>
+<wire x1="10.0925" y1="46.84" x2="10.0525" y2="46.8" width="0.4064" layer="1"/>
 </signal>
 <signal name="+24V_OUT">
 <contactref element="D1" pad="A"/>
@@ -989,23 +1044,27 @@ Určeno pro kreslení a export výrobních dat</description>
 <wire x1="13.3" y1="30" x2="12.6" y2="29.3" width="0.4064" layer="16"/>
 </signal>
 <signal name="P_MISO">
-<contactref element="U$1" pad="3"/>
+<contactref element="U$1" pad="5"/>
 <contactref element="IC1" pad="16"/>
 <wire x1="25.7" y1="46.1926" x2="25.7" y2="47.2" width="0.4064" layer="16"/>
 <wire x1="25.7" y1="47.2" x2="27.23" y2="48.73" width="0.4064" layer="16"/>
-<wire x1="38.9" y1="48.73" x2="27.23" y2="48.73" width="0.4064" layer="16"/>
+<wire x1="39" y1="53.81" x2="29.21" y2="53.81" width="0.4064" layer="16"/>
+<wire x1="29.21" y1="53.81" x2="27.23" y2="51.83" width="0.4064" layer="16"/>
+<wire x1="27.23" y1="48.73" x2="27.23" y2="51.83" width="0.4064" layer="16"/>
 </signal>
 <signal name="P_SCK">
-<contactref element="U$1" pad="2"/>
+<contactref element="U$1" pad="4"/>
 <contactref element="IC1" pad="17"/>
-<wire x1="27.1926" y1="44.7" x2="30.8" y2="44.7" width="0.4064" layer="16"/>
-<wire x1="38.9" y1="46.19" x2="32.29" y2="46.19" width="0.4064" layer="16"/>
-<wire x1="32.29" y1="46.19" x2="30.8" y2="44.7" width="0.4064" layer="16"/>
+<wire x1="39" y1="51.27" x2="34.07" y2="51.27" width="0.4064" layer="16"/>
+<wire x1="34.07" y1="51.27" x2="33" y2="50.2" width="0.4064" layer="16"/>
+<wire x1="27.1926" y1="44.7" x2="29.9" y2="44.7" width="0.4064" layer="16"/>
+<wire x1="29.9" y1="44.7" x2="33" y2="47.8" width="0.4064" layer="16"/>
+<wire x1="33" y1="50.2" x2="33" y2="47.8" width="0.4064" layer="16"/>
 </signal>
 <signal name="P_MOSI">
 <contactref element="U$1" pad="6"/>
 <contactref element="IC1" pad="15"/>
-<wire x1="38.9" y1="56.35" x2="26.25" y2="56.35" width="0.4064" layer="16"/>
+<wire x1="39" y1="56.35" x2="26.25" y2="56.35" width="0.4064" layer="16"/>
 <wire x1="26.25" y1="56.35" x2="24.9" y2="55" width="0.4064" layer="16"/>
 <wire x1="24.9" y1="46.1926" x2="24.9" y2="55" width="0.4064" layer="16"/>
 </signal>
@@ -1017,29 +1076,32 @@ Určeno pro kreslení a export výrobních dat</description>
 <wire x1="27.1926" y1="43.9" x2="31.3" y2="43.9" width="0.4064" layer="16"/>
 <wire x1="31.3" y1="43.9" x2="31.6" y2="43.6" width="0.4064" layer="16"/>
 <via x="31.6" y="43.6" extent="1-16" drill="0.6"/>
-<wire x1="27.2" y1="47.0875" x2="31.5875" y2="43.5875" width="0.4064" layer="1"/>
 <wire x1="31.5875" y1="43.5875" x2="31.6" y2="43.6" width="0.4064" layer="1"/>
 <wire x1="27.2" y1="49.7125" x2="27.2" y2="48" width="0.4064" layer="1"/>
 <wire x1="27.2" y1="48" x2="27.2" y2="47.0875" width="0.4064" layer="1"/>
 <wire x1="24.2" y1="48.1125" x2="27.0875" y2="48.1125" width="0.4064" layer="1"/>
 <wire x1="27.0875" y1="48.1125" x2="27.2" y2="48" width="0.4064" layer="1"/>
+<wire x1="31.5875" y1="43.5875" x2="31.5875" y2="45.2125" width="0.4064" layer="1"/>
+<wire x1="31.5875" y1="45.2125" x2="30.05" y2="46.75" width="0.4064" layer="1"/>
+<wire x1="29.7125" y1="47.0875" x2="29.7" y2="47.1" width="0.4064" layer="1"/>
+<wire x1="27.2" y1="47.0875" x2="29.7125" y2="47.0875" width="0.4064" layer="1"/>
+<wire x1="29.7125" y1="47.0875" x2="30.05" y2="46.75" width="0.4064" layer="1"/>
 </signal>
 <signal name="INT_LOCK_0">
 <contactref element="IC1" pad="23"/>
 <contactref element="K2" pad="1"/>
 <wire x1="27.1926" y1="39.9" x2="31.5" y2="39.9" width="0.4064" layer="16"/>
-<wire x1="31.5" y1="39.9" x2="35" y2="43.4" width="0.4064" layer="16"/>
-<wire x1="35" y1="43.4" x2="35" y2="45.1" width="0.4064" layer="16"/>
-<via x="35" y="45.1" extent="1-16" drill="0.6"/>
-<wire x1="35" y1="45.1" x2="35" y2="46.2" width="0.4064" layer="1"/>
-<wire x1="35" y1="46.2" x2="32.9" y2="48.3" width="0.4064" layer="1"/>
-<wire x1="32.9" y1="48.3" x2="32.9" y2="50" width="0.4064" layer="1"/>
-<via x="32.9" y="50" extent="1-16" drill="0.6"/>
-<wire x1="32.9" y1="50" x2="32.9" y2="53.7" width="0.4064" layer="16"/>
-<via x="32.9" y="53.7" extent="1-16" drill="0.6"/>
-<wire x1="32.9" y1="53.7" x2="32.9" y2="59.1" width="0.4064" layer="1"/>
-<wire x1="25" y1="61.27" x2="30.73" y2="61.27" width="0.4064" layer="1"/>
-<wire x1="30.73" y1="61.27" x2="32.9" y2="59.1" width="0.4064" layer="1"/>
+<wire x1="31.5" y1="39.9" x2="34.65" y2="43.05" width="0.4064" layer="16"/>
+<wire x1="32" y1="62.27" x2="39.23" y2="62.27" width="0.4064" layer="1"/>
+<wire x1="39.23" y1="62.27" x2="41.9" y2="59.6" width="0.4064" layer="1"/>
+<wire x1="41.9" y1="59.6" x2="41.8" y2="59.6" width="0.4064" layer="1"/>
+<wire x1="41.8" y1="59.6" x2="41.7" y2="59.5" width="0.4064" layer="1"/>
+<wire x1="41.7" y1="59.5" x2="41.8" y2="59.4" width="0.4064" layer="1"/>
+<wire x1="41.8" y1="59.4" x2="41.8" y2="42.4" width="0.4064" layer="1"/>
+<wire x1="41.8" y1="42.4" x2="41" y2="41.6" width="0.4064" layer="1"/>
+<wire x1="41" y1="41.6" x2="36.1" y2="41.6" width="0.4064" layer="1"/>
+<wire x1="36.1" y1="41.6" x2="34.65" y2="43.05" width="0.4064" layer="1"/>
+<via x="34.65" y="43.05" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="INT_LOCK_1">
 <contactref element="IC1" pad="24"/>
@@ -1055,4 +1117,10 @@ Určeno pro kreslení a export výrobních dat</description>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
